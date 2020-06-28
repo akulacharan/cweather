@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 style="text-align: center">{{ search | title }}</h2>
+
+    <div class="container">
+        {% for post in final_postings %}
+            <div class="row">
+                <div class="col" style="text-align: left" >
+                    <h6>{{ post.0 }}</h6>
+                    <img src="{{ post.4 }}" >
+                    <h6>Temperature:{{ post.1 }}.</h6>
+                    <h6>{{post.2}}</h6>
+                    <h6>{{post.3}}</h6>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
